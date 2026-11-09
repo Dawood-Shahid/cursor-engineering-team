@@ -1,0 +1,16 @@
+---
+description: React Native and Expo conventions for this project.
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+alwaysApply: false
+---
+
+# React Native
+
+- Follow the existing Expo or React Native CLI setup.
+- Use the navigation pattern already in the project.
+- Keep API calls outside UI components.
+- Use Zustand for client state and TanStack Query for server state only when the project already uses them.
+- Handle Android and iOS differences explicitly.
+- Do not change native project configuration without a stated reason.

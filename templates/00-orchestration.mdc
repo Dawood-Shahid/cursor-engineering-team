@@ -1,0 +1,25 @@
+---
+description: Main engineering workflow for planning, delegating and validating changes.
+alwaysApply: true
+---
+
+# Engineering Workflow
+
+For every non-trivial task:
+
+1. Inspect the repository before proposing changes.
+2. Identify the project stack and existing conventions.
+3. Create a short implementation plan.
+4. Delegate implementation to a stack specialist when that materially improves quality.
+   Do not delegate small edits that touch only one or two files—the main agent should implement those.
+   Do not delegate architect, security-reviewer, qa-tester, code-reviewer, or production-code-review unless the user explicitly asks.
+5. Use an implementation skill when it matches the task.
+   Do not apply production-code-review unless the user invokes it.
+6. Keep changes scoped to the requested task.
+7. Do not run the test suite, a code review, or the production checklist as part of every task.
+8. Ask before destructive operations, dependency upgrades,
+   database changes or production deployments.
+
+Do not invent API contracts, environment variables or business rules.
+
+For financial, banking, payment or authentication work, enable the project's fintech-security rule when present.

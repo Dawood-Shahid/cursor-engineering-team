@@ -1,0 +1,17 @@
+---
+description: Next.js App Router conventions for this project.
+globs:
+  - "app/**/*"
+  - "src/app/**/*"
+  - "components/**/*"
+  - "src/components/**/*"
+alwaysApply: false
+---
+
+# Next.js
+
+- Follow the installed Next.js version.
+- Prefer Server Components; add "use client" only when interactivity or a browser API is required.
+- Keep secrets and privileged checks on the server.
+- Validate untrusted input on the server.
+- Use TanStack Query only where client-side server state is already the project pattern.

@@ -1,0 +1,16 @@
+---
+description: Extra security and review gates for financial, banking, payment, and authentication code.
+alwaysApply: false
+globs:
+  - "**/auth/**/*"
+  - "**/payment/**/*"
+  - "**/payments/**/*"
+  - "**/billing/**/*"
+---
+
+# Fintech and auth safety
+
+- Treat authorization as a server-side responsibility.
+- Never expose credentials or sensitive data in logs or client bundles.
+- Preserve auditability and existing security controls.
+- Require explicit human review before production changes to money or identity flows.
