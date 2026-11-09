@@ -4,6 +4,40 @@ Shared Cursor setup for React Native and Next.js work. This repository is the li
 
 Do not paste this repository into an app. An app keeps only its own `AGENTS.md` and `.cursor/rules/`.
 
+**You are welcome to extend this library.** Open a pull request against this repository for new agents, skills, rule templates, scripts, or documentation. If you are not ready to implement yet, open an issue and describe the workflow you want—especially team-wide patterns for orchestration, delegation, or org-specific conventions.
+
+## Contributing
+
+This repo is meant to be shared. **Feel free to open a PR** (or start with an issue) when you want to add or improve something for everyone on the team.
+
+### What you can contribute
+
+| Area | Examples |
+|------|----------|
+| `agents/` | New specialists (e.g. backend, DevOps), readonly reviewers, or tighter prompts for existing roles |
+| `skills/` | New workflows, checklists, and optional `reference.md` files for deep detail |
+| `templates/` | New `.mdc` rules, updates to `00-orchestration.mdc`, stack rules, or `AGENTS.md` starter |
+| `scripts/` | Installer improvements, validation checks, or docs in `scripts/README.md` |
+| `README.md` | Clearer setup steps, new stack support, or contribution notes like this section |
+
+### How to submit a change
+
+1. Fork or branch from `master`, make focused changes (one theme per PR when possible).
+2. Run `./scripts/validate-library.sh` from the repository root.
+3. Open a **pull request** against this repo with:
+   - What you added or changed and **why** (which task or team pain it solves).
+   - Whether agents/skills are **on-demand** or may run on normal prompts (match existing patterns to save tokens).
+4. After merge, others run `git pull` and reinstall or re-run `./scripts/install.sh` (symlink) / `Install-CursorTeam.ps1` (copy).
+
+### PR guidelines
+
+- Keep agent bodies short; put long checklists in **skills** with a clear `description` (what + when).
+- Opt-in for expensive passes: tests, code review, security, architecture—unless the user explicitly invokes them.
+- Do not commit secrets, real API keys, or project-specific URLs that only one app should use (put those in each app's `AGENTS.md`, not in shared agents).
+- New rules belong in `templates/`; explain globs and when they run in the PR, using [`templates/README.md`](templates/README.md).
+
+Issues are fine for **suggestions only**: describe the agent, skill, or rule you want and how you would use it in daily work. A maintainer or another contributor can pick it up in a follow-up PR.
+
 ## What is in this repository
 
 ### `agents/`
